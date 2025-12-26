@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: #f4f7fb;
+    min-height: 100vh;
+}
+
+.title{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search{
+    padding: 10px 15px;
+    width: 280px;
+    border-radius: 8px;
+    border: 1px solid #00000099;
+    outline: none;
+    font-size: 15px;
+    transition: all .2s ease;
+}
+
+#search:focus{
+    border: 2px solid #4e89ff;
+}
+
+
+#btn, #btn1{
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4e89ff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#btn:hover, #btn1:hover{
+    background-color: #1f5fff;
+    transform: scale(1.05);
+    box-shadow: 0px 2px 5px rgb(97, 97, 97);
+}
+
+
+.container{
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95vw;
+    min-height: 75vh;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+img{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+img:hover{
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
+}
+
+#btn1{
+    display: block;
+    margin: 20px auto 30px;
+}
+
+
+
+.footer{
+    margin-top: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.08);
+}
+
+.footer p{
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.footer .name{
+    font-weight: bold;
+    color: #4e89ff;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials img{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.socials img:hover{
+    transform: scale(1.2);
+}
+
+
+
+.preview{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.preview img{
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+#download{
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    background: #4e89ff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
