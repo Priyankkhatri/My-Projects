@@ -69,16 +69,17 @@ body{
     padding: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-img{
+.container img{
     width: 220px;
     height: 220px;
     object-fit: cover;
     margin: 10px;
     border-radius: 12px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
-img:hover{
+.container img:hover{
     transform: translateY(-8px);
     box-shadow: 0px 10px 20px rgba(0,0,0,0.25);
 }
@@ -126,31 +127,60 @@ img:hover{
     transform: scale(1.2);
 }
 
-
-
 .preview{
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0,0,0,0.85);
     display: none;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     z-index: 999;
 }
 
-.preview img{
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+.imgBox{
+    position: relative;
 }
 
-#download{
-    margin-top: 20px;
-    padding: 12px 25px;
-    border-radius: 8px;
-    border: none;
-    background: #4e89ff;
-    color: white;
-    font-weight: bold;
+#closeBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    padding: 2px;
+    transition: all 0.2s ease;
 }
+
+#closeBtn:hover{
+    transform: scale(1.1);
+}
+
+.preview img{
+    width: auto;
+    height: auto;
+    max-width: 85vw;
+    max-height: 85vh;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .container{
+        justify-content: space-between;
+    }
+
+    .container img{
+        width: 48%;
+        height: 180px;
+        margin: 6px 0px;
+        border-radius: 10px;
+    }
+}
+
+
