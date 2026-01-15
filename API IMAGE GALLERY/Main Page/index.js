@@ -39,7 +39,7 @@ searchBtn.addEventListener("click", function () {
   query = searchInput.value;
   loadImages();
 });
-searchInput.addEventListener('keydown',(enter)=> {
+searchInput.addEventListener('keypress',(enter)=> {
   if (enter.key === 'Enter') {
     data1.innerHTML = '';
     page = 1;
@@ -59,7 +59,28 @@ function showPreview(src){
     overlayImg.src = src;
 }
 
-closeBtn.addEventListener("click", function () {
+closeBtn.addEventListener("click",()=>{
     preview.style.display = "none";
 });
 
+document.addEventListener("keydown", function(close){
+  if (close.key === "Escape") {
+    preview.style.display = "none";
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var categoryDivs = document.querySelectorAll('.categories div');
+    
+    categoryDivs.forEach(function(categoryDiv) {
+        categoryDiv.addEventListener('click', function() {
+            var categoryName = this.getAttribute('data-category');
+          
+            searchInput.value = categoryName;
+            data1.innerHTML = "";
+            page = 1;
+            query = categoryName;
+            loadImages();
+        });
+    });
+});
