@@ -1,0 +1,361 @@
+:root {
+  /* Premium Frosted Glassmorphism Theme */
+  --bg-0: #0f172a;
+  --bg-1: #1e293b;
+  --bg-2: #111827;
+  
+  --accent-1: #a18cd1; /* Soft Violet */
+  --accent-2: #38bdf8; /* Soft Cyan */
+  
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(161, 140, 209, 0.3);
+  --focus-ring: 0 0 0 2px rgba(56, 189, 248, 0.5);
+  
+  /* Layout */
+  --nav-height: 70px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-0);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* =========================================
+   Advanced Multi-Layer Background System
+   ========================================= */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 10%, var(--bg-1), var(--bg-0) 60%, var(--bg-2) 100%);
+  background-size: 150% 150%;
+  animation: bgPulse 25s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+  0% { background-position: 50% 0%; }
+  100% { background-position: 50% 100%; }
+}
+
+/* Layer 2: Floating Light Blobs */
+.app-background::before,
+.app-background::after {
+  content: '';
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: floatBlobs 25s infinite alternate ease-in-out;
+}
+
+.app-background::before {
+  top: -10%;
+  left: -10%;
+  background: radial-gradient(circle, var(--accent-1), transparent 60%);
+}
+
+.app-background::after {
+  bottom: -20%;
+  right: -10%;
+  background: radial-gradient(circle, var(--accent-2), transparent 60%);
+  animation-delay: -12.5s;
+  animation-duration: 30s;
+}
+
+@keyframes floatBlobs {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10%, 15%) scale(1.1); }
+  100% { transform: translate(-5%, 5%) scale(0.95); }
+}
+
+/* Layer 3: Subtle Film Grain Overlay */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* =========================================
+   Typography & Base elements
+   ========================================= */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-2);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+button:focus-visible {
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.main-content {
+  padding-top: calc(var(--nav-height) + 2rem);
+  min-height: calc(100vh - var(--nav-height));
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   Premium Glassmorphism System
+   ========================================= */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================
+   Buttons & Micro-interactions
+   ========================================= */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  border-radius: 50%;
+}
+
+.btn:active::after {
+  transform: translate(-50%, -50%) scale(2);
+  opacity: 1;
+  transition: 0s;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.15);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 8px 25px rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 4px 15px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+.btn-icon {
+  color: var(--text-muted);
+  padding: 0.6rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-icon:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.1);
+}
+
+.btn-icon.active {
+  color: var(--text-primary);
+}
+
+/* =========================================
+   Forms & Inputs
+   ========================================= */
+input, select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+input:focus, select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15), inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+option {
+  background-color: var(--bg-1);
+  color: var(--text-primary);
+}
+
+/* =========================================
+   Grid & Layout
+   ========================================= */
+.movie-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+@media (min-width: 640px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* =========================================
+   Transitions & Animations Settings
+   ========================================= */
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .app-background::before, .app-background::after {
+    display: none;
+  }
+}
+
+/* =========================================
+   Status Messages
+   ========================================= */
+.empty-state, .error-state {
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: 16px;
+  margin: 3rem auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-state h3, .error-state h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.text-secondary {
+  color: var(--text-muted);
+}
+
+.error-state {
+  border-color: rgba(255, 59, 48, 0.3);
+  background: linear-gradient(to bottom, rgba(255, 59, 48, 0.05), transparent);
+}
