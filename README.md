@@ -84,7 +84,7 @@ Demo videos of these projects will be shared on LinkedIn and YouTube.
 ## 👨‍💻 Author
 
 **Priyank Khatri**  
-B.Tech CSE Student  
+B.Tech/BE CSE Student  
 Frontend-focused | Clean UI enthusiast  
 
 ---
