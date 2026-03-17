@@ -1,18 +1,18 @@
-# 🚀 Portfolio Project Dashboard
+# 🚀 My Web Development Project Collection
 
-Welcome to my central hub for web development projects. This repository showcases a diverse range of frontend applications, from interactive games to complex API integrations and pixel-perfect design clones.
+Welcome to my central repository for various web development projects. This collection showcases a diverse range of frontend applications, from interactive games to complex API integrations and creative design clones.
 
 ---
 
 ## 📂 Project Categories
 
 ### 🧠 [API-Powered Projects](file:///c:/Users/Priyank/Desktop/My-Projects/Api%20projects)
-Dynamic applications that leverage external data to provide rich user experiences.
+Dynamic applications that leverage external data to provide interactive experiences.
 - **[API Image Gallery](file:///c:/Users/Priyank/Desktop/My-Projects/Api%20projects/API%20IMAGE%20GALLERY)**: A high-performance gallery with dynamic search and "load more" functionality.
 - **[API Movie Explorer](file:///c:/Users/Priyank/Desktop/My-Projects/Api%20projects/API%20MOVIE%20EXPLORER)**: A search engine for movies with real-time data fetching.
 
 ### 🍱 [Creative Website Clones](file:///c:/Users/Priyank/Desktop/My-Projects/Clone-Websites)
-Mastery of high-end frontend design and modern CSS layouts.
+Focus on pixel-perfect frontend design and modern CSS layouts.
 - Featured Clones: **Nothing, DJI, Snitch, BeyondSnack, DrinkPrime, Soylent**.
 - **Tech Highlights**: GSAP, Framer Motion, Vanilla CSS Grid.
 
@@ -23,7 +23,7 @@ Logic-heavy interactive components and browser-based games.
 
 ---
 
-## 🛠️ Combined Tech Stack
+## 🛠️ Tech Stack
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -32,14 +32,14 @@ Logic-heavy interactive components and browser-based games.
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Developer
 
 **Priyank Khatri**  
 B.Tech/BE CSE Student | Frontend Enthusiast  
-*Building premium web experiences one pixel at a time.*
+*Building and exploring web technologies.*
 
 ---
 
 ## ⭐ Feedback & Support
 
-If you find these projects helpful, feel free to star the individual repositories or reach out for collaborations!
+If you find these projects interesting, feel free to star the repository or reach out for collaborations!

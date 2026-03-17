@@ -17,4 +17,4 @@ A gallery of pixel-perfect website clones built to master frontend design, respo
 - **Modern CSS**: Using Variables and Utility classes.
 
 ---
-*Part of the [My-Projects](file:///c:/Users/Priyank/Desktop/My-Projects/README.md) portfolio.*
+*Part of the [My-Projects](file:///c:/Users/Priyank/Desktop/My-Projects/README.md) collection.*

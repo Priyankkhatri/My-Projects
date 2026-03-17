@@ -20,4 +20,4 @@ A collection of fun, interactive web-based games built using Vanilla JavaScript,
 - **JavaScript**: Core game logic and state management.
 
 ---
-*Part of the [My-Projects](file:///c:/Users/Priyank/Desktop/My-Projects/README.md) portfolio.*
+*Part of the [My-Projects](file:///c:/Users/Priyank/Desktop/My-Projects/README.md) collection.*
