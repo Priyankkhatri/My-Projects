@@ -1,95 +1,45 @@
-# 📸 API Image Gallery & 🎬 API Movie Explorer
+# 🚀 Portfolio Project Dashboard
 
-This repository contains two responsive frontend web applications built to practice API handling, DOM manipulation, and clean UI using vanilla JavaScript.
-
----
-
-## 📸 Project 1: API Image Gallery
-
-A responsive image gallery web application that fetches high-quality images using a public API.  
-Users can search images by keyword and load more results dynamically.
-
-### 🚀 Features
-- 🔍 Search images by keyword  
-- 📦 Fetch images dynamically from API  
-- ➕ Load more images without page reload  
-- 🖼️ Responsive image grid layout  
-- ⚡ Lightweight and fast performance  
-
-### 🛠️ Tech Stack
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla JS)  
-- Pexels API  
-
-### 🔑 API Used
-- Pexels Image API  
-> Note: API key is kept private for security reasons.
-
-### 🎯 What I Learned
-- Fetching data using `fetch()`  
-- Working with asynchronous JavaScript  
-- DOM manipulation and dynamic UI updates  
-- Implementing load-more functionality  
-- Writing clean and readable JavaScript code  
-
-### 📌 Future Improvements
-- Fullscreen image preview  
-- Download image option  
-- Infinite scrolling  
-- Save favorite images using localStorage  
+Welcome to my central hub for web development projects. This repository showcases a diverse range of frontend applications, from interactive games to complex API integrations and pixel-perfect design clones.
 
 ---
 
-## 🎬 Project 2: API Movie Explorer
+## 📂 Project Categories
 
-A responsive movie explorer web application that fetches movie data using a public API.  
-Users can search for movies and view details dynamically in a responsive layout.
+### 🧠 [API-Powered Projects](file:///c:/Users/Priyank/Desktop/My-Projects/Api%20projects)
+Dynamic applications that leverage external data to provide rich user experiences.
+- **[API Image Gallery](file:///c:/Users/Priyank/Desktop/My-Projects/Api%20projects/API%20IMAGE%20GALLERY)**: A high-performance gallery with dynamic search and "load more" functionality.
+- **[API Movie Explorer](file:///c:/Users/Priyank/Desktop/My-Projects/Api%20projects/API%20MOVIE%20EXPLORER)**: A search engine for movies with real-time data fetching.
 
-### 🚀 Features
-- 🔍 Search movies by title or keyword  
-- 📦 Fetch movie information dynamically from API  
-- 🖼️ Responsive movie card layout  
-- ⚡ Lightweight and fast performance  
+### 🍱 [Creative Website Clones](file:///c:/Users/Priyank/Desktop/My-Projects/Clone-Websites)
+Mastery of high-end frontend design and modern CSS layouts.
+- Featured Clones: **Nothing, DJI, Snitch, BeyondSnack, DrinkPrime, Soylent**.
+- **Tech Highlights**: GSAP, Framer Motion, Vanilla CSS Grid.
 
-### 🛠️ Tech Stack
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla JS)  
-- Movie API (e.g., OMDB/TMDB)
-
-### � API Used
-- Public Movie API  
-> Note: API key is kept private for security reasons.
-
-### 🎯 What I Learned
-- Handling and displaying structured JSON data from APIs
-- Working with asynchronous JavaScript (`fetch()`)
-- DOM manipulation and updating UI dynamically based on search queries
-- Managing empty states and error handling for searches
-
-### 📌 Future Improvements
-- Detailed movie view with cast and ratings
-- Save favorite movies using `localStorage`  
-- Filtering by genre or release year
+### 🎮 [Interactive Mini-Games](file:///c:/Users/Priyank/Desktop/My-Projects/Mini-Games)
+Logic-heavy interactive components and browser-based games.
+- **Highlights**: **07-Tic-Tac-Toe** (AI-powered), **04-Typing-Speed-Test**, **03-Whack-A-Mole**.
+- **Focus**: State management and high-performance DOM updates.
 
 ---
 
-## 📸 Demo
+## 🛠️ Combined Tech Stack
 
-Demo videos of these projects will be shared on LinkedIn and YouTube.
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
 ---
 
 ## 👨‍💻 Author
 
 **Priyank Khatri**  
-B.Tech/BE CSE Student  
-Frontend-focused | Clean UI enthusiast  
+B.Tech/BE CSE Student | Frontend Enthusiast  
+*Building premium web experiences one pixel at a time.*
 
 ---
 
-## ⭐ Feedback
+## ⭐ Feedback & Support
 
-If you like these projects, feel free to star ⭐ the repository.  
-Suggestions and improvements are always welcome.
+If you find these projects helpful, feel free to star the individual repositories or reach out for collaborations!
